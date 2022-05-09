@@ -1,0 +1,726 @@
+//================== Geral =================\\
+
+$hue: 300;
+$primary-color: hsl($hue, 100%, 26%);
+$headline: hsl(210, 11%, 15%);
+$paragraph: hsl(210, 9%, 31%);
+$text-color: hsl(0, 0%, 100%);
+$brand-beige: hsl(39, 100%, 97%);
+$brand-Light: hsl($hue - 22, 23%, 89%);
+$brand-LightTwo: hsl($hue + 10, 14%, 97%);
+$brand-dark: hsl($hue, 100%, 14%);
+$bg-Light: hsl(180, 14%, 97%);
+$card-bg: hsl(0, 0%, 100%);
+$nav-height: 7.2rem;
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "DM sans", sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  overflow: overlay;
+  background-color: $bg-Light;
+}
+
+.wrapper {
+  width: min(50rem, 100%);
+  margin-inline: auto;
+  padding-inline: 2.4rem;
+}
+
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+
+section {
+  padding-block: 10rem;
+
+  header {
+
+    h4 {
+      margin-bottom: 1.6rem;
+      font-size: 1.4rem;
+      color: $primary-color;
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 3rem;
+      line-height: 3.9rem;
+      color: $headline;
+    }
+    h1 {
+      margin-bottom: 2.4rem;
+      font-size: 3.4rem;
+      color: $headline;
+      line-height: 130%;
+    }
+  }
+  p {
+    font-size: 1.6rem;
+    line-height: 150%;
+    color: $paragraph;
+  }
+}
+.button {
+  margin-bottom: 6rem;
+  padding: 1.6rem 3.2rem;
+  width: fit-content;
+  border-radius: 4rem;
+  text-transform: uppercase;
+  color: $brand-LightTwo;
+  background-color: $primary-color;
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  text-decoration: none;
+  transition: all ease 0.2s;
+
+  &:hover {
+    background-color: $brand-dark;
+  }
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+
+//================== Custon Colors =================\\
+
+
+#services circle {
+  fill: $brand-Light;
+}
+#navigation .logo path[fill*="#00856F"],
+#backToTopButton circle {
+  fill: $primary-color;
+}
+button.open-menu path[stroke*="#00856F"],
+#contact li path {
+  stroke: $primary-color;
+}
+body.menu-expanded #navigation .logo path,
+#navigation.scroll .logo path {
+  fill: $brand-Light;
+}
+#navigation.scroll button.open-menu path[stroke*="#00856F"] {
+  stroke: $text-color;
+}
+
+
+//================== Home =================\\
+
+
+#home::before {
+  content: '';
+  width: 100%;
+  height: calc(85% - $nav-height);
+  background-color: $brand-Light;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#home {
+  padding-block: 0;
+  padding-top: $nav-height + 4.1rem;
+
+  p {
+    margin-bottom: 3.2rem;
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: $paragraph;
+  }
+
+  img {
+    width: 26.4rem;
+    display: block;
+    margin-inline: auto;
+    object-position: 0 2rem;
+  }
+  .button {
+    margin-inline: auto;
+  }
+}
+
+.stats {
+  width: 100%;
+  padding-block: 4rem;
+  background-color: $brand-beige;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  padding-top: 4rem;
+  border: 1px solid $brand-Light;
+  border-radius: 0.6rem;
+
+  p {
+    color: $primary-color;
+    margin: 0;
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 4.8rem;
+    line-height: 130%;
+    color: $headline;
+    margin-bottom: 0.4rem;
+    font-weight: 700;
+  }
+}
+
+
+//================== Menu-expanded =================\\
+
+
+
+body.menu-expanded {
+  overflow: hidden;
+}
+
+body.menu-expanded> :not(nav) {
+  visibility: hidden;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded button {
+  position: relative;
+  z-index: 100;
+}
+
+body.menu-expanded .logo path {
+  fill: white;
+}
+
+body.menu-expanded button path {
+  stroke: white;
+}
+
+.menu,
+.close-menu,
+body.menu-expanded .open-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.menu-expanded .menu,
+body.menu-expanded .close-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.menu-expanded .menu {
+  top: 0;
+  left: 0;
+  background-color: $primary-color;
+  width: 100vw;
+  height: 100vh;
+  padding-top: $nav-height;
+  transition: transform 300ms;
+  transform: translateY(0%);
+}
+
+.menu {
+  transform: translateY(100%);
+
+  ul:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    margin-top: 6rem;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+
+    a {
+      text-decoration: none;
+      color: $brand-LightTwo;
+    }
+  }
+
+  .button {
+    background: $brand-Light;
+    border-radius: 4rem;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $primary-color;
+    display: inline-block;
+    padding: 1.6rem 3.2rem;
+    margin-top: 4.8rem;
+    margin-bottom: 8rem;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $brand-LightTwo;
+      filter: brightness(1.2);
+    }
+  }
+}
+
+
+//================== Nav =================\\
+
+
+nav {
+  display: flex;
+  height: $nav-height;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}
+nav .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav.scroll {
+  background-color: $primary-color;
+}
+nav button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+nav .menu,
+nav .close-menu {
+  position: fixed;
+}
+
+
+//================== Services =================\\
+
+
+
+#services {
+
+  header {
+
+    h2 {
+      margin-bottom: 6rem;
+    } 
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .card {
+    padding: 2.4rem;
+    text-align: left;
+    background: $card-bg;
+    border: 1px solid $brand-Light;
+    border-radius: 0.6rem;
+
+    h3 {
+      margin-block: 1.6rem;
+      font-size: 2.4rem;
+      line-height: 3.1rem;
+      color: $headline;
+    }
+  }
+}
+
+
+//================== About =================\\
+
+
+#about {
+  text-align: left;
+  background-color: $brand-beige;
+
+  header {
+
+    h2 {
+      margin-bottom: 2.4rem;
+    }
+  }
+  p {
+    margin-top: 2.4rem;
+    margin-bottom: 6rem;
+  }
+}
+
+
+//================== contact =================\\
+
+
+#contact {
+  text-align: left;
+
+  header {
+    margin-bottom: 3.2rem;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 3.2rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+  }
+}
+
+
+//================== footer =================\\
+
+
+footer {
+  background-color: $primary-color;
+  padding-block: 6rem;
+  text-align: left;
+  color: $brand-LightTwo;
+
+  .logo {
+    display: inline-block;
+    margin-bottom: 2.4rem;
+  }
+
+  .logo svg {
+    width: 23.6rem;
+    height: 3.1rem;
+  }
+
+  .logo path {
+    fill: white;
+  }
+
+  p {
+    color: $brand-beige;
+    line-height: 2;
+    margin-bottom: 3.2rem;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+  }
+}
+
+
+//================== back To Top =================\\
+
+
+#backToTopButton {
+  position: fixed;
+  bottom: 1rem;
+  right: 2.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: 200ms;
+}
+#backToTopButton.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+//================== Responsividade =================\\
+
+
+
+@media (min-width: 1024px) {
+
+  //================== Geral =================\\
+
+
+  body {
+    overflow: auto;
+  }
+  .wrapper {
+    width: min(112rem, 100%);
+    display: grid;
+  }
+  .col-a {
+      grid-area: a;
+  }
+  .col-b {
+      grid-area: b;
+  }
+  section {
+    padding-block: 16rem;
+  }
+  section header h2 {
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+
+  // reset \\
+  nav#navigation .wrapper * {
+    margin: 0;
+    padding: 0;
+    visibility: initial;
+    display: initial;
+    opacity: initial;
+    flex-direction: initial;
+    position: initial;
+    opacity: initial;
+    font-size: initial;
+    font-weight: initial;
+    transform: initial;
+    color: initial;
+    background-color: initial;
+    filter: initial;
+  }
+
+
+  //================== Navigation =================\\
+
+
+
+  nav#navigation .open-menu,
+  nav#navigation .close-menu, 
+  nav#navigation .social-links {
+    display: none;
+  }
+  nav#navigation .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 68%;
+  }
+
+  nav#navigation .menu ul:nth-child(1) {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  nav#navigation .menu ul li a {
+    color: $primary-color;
+    opacity: 0.7;
+  }
+
+  nav#navigation .menu a.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2.4rem;
+    border: 1px solid $primary-color;
+    border-radius: 4rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-transform: uppercase;
+    color: $primary-color;
+  }
+
+  nav#navigation.scroll .menu ul li a {
+    color: $bg-Light;
+    opacity: 0.6;
+  }
+
+  nav#navigation.scroll .menu a.button {
+    border-color: $brand-LightTwo;
+    color: $brand-LightTwo;
+  }
+  nav#navigation .menu li a {
+    transition: opacity 0.4s;
+  }
+  nav#navigation .menu li a.active,
+  nav#navigation .menu li a:hover {
+    opacity: 1;
+    font-weight: 700;
+  }
+  nav#navigation .menu li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: $primary-color;
+    display: block;
+    position: relative;
+    bottom: -2rem;
+    left: -0.8rem;
+    transition: width 0.2s;
+  }
+  nav#navigation.scroll .menu li a::after {
+    background-color: $text-color;
+  }
+  nav#navigation .menu li a.active::after,
+  nav#navigation .menu li a:hover::after {
+    padding-inline: 0.8rem;
+    width: 100%;
+  }
+  nav#navigation.scroll .menu li a.active,
+  nav#navigation.scroll .menu li a:hover {
+    opacity: 1;
+  }
+  nav#navigation .menu a.button.active,
+  nav#navigation .menu a.button:hover {
+    background-color: $primary-color;
+    color: $brand-LightTwo;
+  }
+  nav#navigation.scroll .menu a.button.active,
+  nav#navigation.scroll .menu a.button:hover {
+    background-color: $primary-color;
+    filter: brightness(1.3);
+  }
+
+
+  //================== Home =================\\
+
+
+  #home::before {
+    height: calc(95% - $nav-height)
+  }
+  #home {
+    padding-top: $nav-height;
+
+    .wrapper {
+      grid-template-columns: 60.5rem 1fr;
+      grid-template-areas:
+      "a b"
+      "c c";
+    }
+    .col-a {
+      text-align: left;
+      align-self: center;
+    }
+    h1 {
+      font-size: 5.2rem;
+      line-height: 130%;
+    }
+    .content p {
+      font-size: 1.8rem
+    }
+    .stats {
+      grid-area: c;
+      flex-direction: row;
+      padding: 6rem;
+      gap: 0;
+    }
+    .button {
+      margin: 0;
+    }
+    img {
+      width: 42rem;
+    }
+  }
+  #home .stat + .stat {
+    border-left: 1px solid $primary-color;
+  }
+  #home .stats .stat {
+    flex: 1;
+  }
+
+
+
+  //================== Services =================\\
+
+
+  #services {
+
+    h2 {
+      width: 49rem;
+      margin-inline: auto;
+    }
+    .cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .card {
+      width: 30%;
+      flex-grow: 1;
+      gap: 4rem;
+    }
+  }
+
+
+  //================== About =================\\
+
+
+  #about {
+    
+    .wrapper {
+      grid-template-columns: 1fr 48rem;
+      grid-template-areas: "b a";
+      gap: 6.7rem;
+    }
+    .col-a {
+      align-self: center;
+    }
+    .content {
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+
+  //================== Contact =================\\
+
+
+  #contact .wrapper {
+    grid-template-columns: 1fr 57.5rem;
+    grid-template-areas: "a b";
+    h2 {
+      width: 40.4rem;
+    }
+  }
+
+
+  //================== Footer =================\\
+
+
+  footer { 
+  padding-block: 8rem;
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a b";
+    p {
+      margin-bottom: 0;
+    }
+    .col-a {
+    align-self: center;
+    }
+    .col-b {
+    align-self: center;
+    justify-self: end;
+    }
+    }
+  }
+}
