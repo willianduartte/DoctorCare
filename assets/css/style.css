@@ -46,7 +46,7 @@ section {
 section header h4 {
   margin-bottom: 1.6rem;
   font-size: 1.4rem;
-  color: hsl(300deg, 100%, 26%);
+  color: hsl(280deg, 100%, 26%);
   font-weight: 700;
   line-height: 150%;
   letter-spacing: 0.08em;
@@ -75,8 +75,8 @@ section p {
   width: fit-content;
   border-radius: 4rem;
   text-transform: uppercase;
-  color: hsl(310deg, 14%, 97%);
-  background-color: hsl(300deg, 100%, 26%);
+  color: hsl(290deg, 14%, 97%);
+  background-color: hsl(280deg, 100%, 26%);
   font-size: 1.4rem;
   font-weight: 700;
   display: flex;
@@ -87,7 +87,7 @@ section p {
   transition: all ease 0.2s;
 }
 .button:hover {
-  background-color: hsl(300deg, 100%, 14%);
+  background-color: hsl(280deg, 100%, 14%);
 }
 
 .social-links {
@@ -97,23 +97,31 @@ section p {
   gap: 3.2rem;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: hsl(280deg, 100%, 26%);
+}
+
+#services path {
+  stroke: hsl(280deg, 100%, 26%);
+}
+
 #services circle {
-  fill: hsl(278deg, 23%, 89%);
+  fill: hsl(258deg, 23%, 89%);
 }
 
 #navigation .logo path[fill*="#00856F"],
 #backToTopButton circle {
-  fill: hsl(300deg, 100%, 26%);
+  fill: hsl(280deg, 100%, 26%);
 }
 
 button.open-menu path[stroke*="#00856F"],
 #contact li path {
-  stroke: hsl(300deg, 100%, 26%);
+  stroke: hsl(280deg, 100%, 26%);
 }
 
 body.menu-expanded #navigation .logo path,
 #navigation.scroll .logo path {
-  fill: hsl(278deg, 23%, 89%);
+  fill: hsl(258deg, 23%, 89%);
 }
 
 #navigation.scroll button.open-menu path[stroke*="#00856F"] {
@@ -124,7 +132,7 @@ body.menu-expanded #navigation .logo path,
   content: "";
   width: 100%;
   height: calc(85% - 7.2rem);
-  background-color: hsl(278deg, 23%, 89%);
+  background-color: hsl(258deg, 23%, 89%);
   display: block;
   position: absolute;
   top: 0;
@@ -163,11 +171,11 @@ body.menu-expanded #navigation .logo path,
   align-items: center;
   gap: 6rem;
   padding-top: 4rem;
-  border: 1px solid hsl(278deg, 23%, 89%);
+  border: 1px solid hsl(258deg, 23%, 89%);
   border-radius: 0.6rem;
 }
 .stats p {
-  color: hsl(300deg, 100%, 26%);
+  color: hsl(280deg, 100%, 26%);
   margin: 0;
   font-size: 1.6rem;
 }
@@ -217,7 +225,7 @@ body.menu-expanded .close-menu {
 body.menu-expanded .menu {
   top: 0;
   left: 0;
-  background-color: hsl(300deg, 100%, 26%);
+  background-color: hsl(280deg, 100%, 26%);
   width: 100vw;
   height: 100vh;
   padding-top: 7.2rem;
@@ -239,25 +247,25 @@ body.menu-expanded .menu {
 }
 .menu ul:nth-child(1) a {
   text-decoration: none;
-  color: hsl(310deg, 14%, 97%);
+  color: hsl(290deg, 14%, 97%);
 }
 .menu .button {
-  background: hsl(278deg, 23%, 89%);
+  background: hsl(258deg, 23%, 89%);
   border-radius: 4rem;
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 2.3rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: hsl(300deg, 100%, 26%);
+  color: hsl(280deg, 100%, 26%);
   display: inline-block;
   padding: 1.6rem 3.2rem;
   margin-top: 4.8rem;
   margin-bottom: 8rem;
 }
 .menu .button:hover {
-  background-color: hsl(300deg, 100%, 26%);
-  color: hsl(310deg, 14%, 97%);
+  background-color: hsl(280deg, 100%, 26%);
+  color: hsl(290deg, 14%, 97%);
   filter: brightness(1.2);
 }
 
@@ -277,7 +285,7 @@ nav .wrapper {
 }
 
 nav.scroll {
-  background-color: hsl(300deg, 100%, 26%);
+  background-color: hsl(280deg, 100%, 26%);
 }
 
 nav button {
@@ -303,7 +311,7 @@ nav .close-menu {
   padding: 2.4rem;
   text-align: left;
   background: hsl(0deg, 0%, 100%);
-  border: 1px solid hsl(278deg, 23%, 89%);
+  border: 1px solid hsl(258deg, 23%, 89%);
   border-radius: 0.6rem;
 }
 #services .card h3 {
@@ -313,9 +321,93 @@ nav .close-menu {
   color: hsl(210deg, 11%, 15%);
 }
 
+#depositions path {
+  fill: hsl(280deg, 100%, 26%);
+}
+#depositions header h2 {
+  margin-bottom: 6rem;
+}
+#depositions p {
+  margin-block: 2rem;
+}
+#depositions .testimonial {
+  width: 100%;
+  text-align: left;
+  background-color: hsl(258deg, 23%, 89%);
+  margin-bottom: 3.2rem;
+  padding: 3.2rem;
+}
+#depositions .people {
+  display: flex;
+  align-items: center;
+}
+#depositions .people img {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 5rem;
+}
+#depositions .people .people-name {
+  margin-left: 1.6rem;
+  color: hsl(280deg, 100%, 26%);
+}
+
+#companies {
+  padding-block: 5rem;
+}
+#companies .company {
+  margin-top: 4.8rem;
+}
+#companies path {
+  fill: hsl(280deg, 100%, 26%);
+}
+#companies .company:nth-child(4) path:nth-child(4) {
+  fill: white;
+}
+
+#banner {
+  padding-top: 3rem;
+  padding-block: 0;
+  margin-bottom: -10rem;
+}
+#banner .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-block: 2rem;
+  width: 90%;
+  background-color: hsl(280deg, 100%, 26%);
+  border-radius: 1rem;
+  position: relative;
+  z-index: 9;
+}
+#banner h3 {
+  font-size: 3rem;
+  line-height: 5.2rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+#banner .button {
+  background-color: white;
+  color: hsl(280deg, 100%, 26%);
+  margin-bottom: 3rem;
+}
+#banner .button path {
+  fill: hsl(280deg, 100%, 26%);
+}
+#banner .button:hover {
+  background-color: hsl(280deg, 100%, 26%);
+  filter: brightness(1.3);
+  color: white;
+}
+#banner .button:hover path {
+  fill: white;
+}
+
 #about {
   text-align: left;
   background-color: hsl(39deg, 100%, 97%);
+  padding-top: 15rem;
 }
 #about header h2 {
   margin-bottom: 2.4rem;
@@ -342,12 +434,15 @@ nav .close-menu {
   align-items: center;
   gap: 0.8rem;
 }
+#contact iframe {
+  width: 100%;
+}
 
 footer {
-  background-color: hsl(300deg, 100%, 26%);
+  background-color: hsl(280deg, 100%, 26%);
   padding-block: 6rem;
   text-align: left;
-  color: hsl(310deg, 14%, 97%);
+  color: hsl(290deg, 14%, 97%);
 }
 footer .logo {
   display: inline-block;
@@ -377,6 +472,7 @@ footer .social-links {
   visibility: hidden;
   transform: translateY(100%);
   transition: 200ms;
+  z-index: 99;
 }
 
 #backToTopButton.show {
@@ -448,7 +544,7 @@ nav#navigation .social-links {
   }
 
   nav#navigation .menu ul li a {
-    color: hsl(300deg, 100%, 26%);
+    color: hsl(280deg, 100%, 26%);
     opacity: 0.7;
   }
 
@@ -457,13 +553,13 @@ nav#navigation .social-links {
     justify-content: center;
     align-items: center;
     padding: 1rem 2.4rem;
-    border: 1px solid hsl(300deg, 100%, 26%);
+    border: 1px solid hsl(280deg, 100%, 26%);
     border-radius: 4rem;
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 1.8rem;
     text-transform: uppercase;
-    color: hsl(300deg, 100%, 26%);
+    color: hsl(280deg, 100%, 26%);
   }
 
   nav#navigation.scroll .menu ul li a {
@@ -472,8 +568,8 @@ nav#navigation .social-links {
   }
 
   nav#navigation.scroll .menu a.button {
-    border-color: hsl(310deg, 14%, 97%);
-    color: hsl(310deg, 14%, 97%);
+    border-color: hsl(290deg, 14%, 97%);
+    color: hsl(290deg, 14%, 97%);
   }
 
   nav#navigation .menu li a {
@@ -490,7 +586,7 @@ nav#navigation .menu li a:hover {
     content: "";
     width: 0%;
     height: 2px;
-    background-color: hsl(300deg, 100%, 26%);
+    background-color: hsl(280deg, 100%, 26%);
     display: block;
     position: relative;
     bottom: -2rem;
@@ -515,13 +611,13 @@ nav#navigation.scroll .menu li a:hover {
 
   nav#navigation .menu a.button.active,
 nav#navigation .menu a.button:hover {
-    background-color: hsl(300deg, 100%, 26%);
-    color: hsl(310deg, 14%, 97%);
+    background-color: hsl(280deg, 100%, 26%);
+    color: hsl(290deg, 14%, 97%);
   }
 
   nav#navigation.scroll .menu a.button.active,
 nav#navigation.scroll .menu a.button:hover {
-    background-color: hsl(300deg, 100%, 26%);
+    background-color: hsl(280deg, 100%, 26%);
     filter: brightness(1.3);
   }
 
@@ -561,13 +657,16 @@ nav#navigation.scroll .menu a.button:hover {
   }
 
   #home .stat + .stat {
-    border-left: 1px solid hsl(300deg, 100%, 26%);
+    border-left: 1px solid hsl(280deg, 100%, 26%);
   }
 
   #home .stats .stat {
     flex: 1;
   }
 
+  #services {
+    padding-bottom: 0;
+  }
   #services h2 {
     width: 49rem;
     margin-inline: auto;
@@ -582,6 +681,39 @@ nav#navigation.scroll .menu a.button:hover {
     gap: 4rem;
   }
 
+  #depositions .wrapper {
+    display: block;
+  }
+  #depositions header h2 {
+    width: 48rem;
+    margin-inline: auto;
+  }
+
+  #companies .companies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16rem;
+  }
+  #companies .company + .company {
+    margin-left: 5rem;
+  }
+
+  #banner .wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-block: 10rem;
+  }
+  #banner h3 {
+    width: 50rem;
+    text-align: left;
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+
+  #about {
+    padding-top: 25rem;
+  }
   #about .wrapper {
     grid-template-columns: 1fr 48rem;
     grid-template-areas: "b a";
@@ -594,6 +726,17 @@ nav#navigation.scroll .menu a.button:hover {
     margin-bottom: 0;
   }
 
+  #contact {
+    padding-block: 5rem;
+  }
+  #contact .col-a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #contact iframe {
+    width: 100%;
+  }
   #contact .wrapper {
     grid-template-columns: 1fr 57.5rem;
     grid-template-areas: "a b";

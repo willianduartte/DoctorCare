@@ -8,7 +8,7 @@ function onScroll() {
   activateMenuAtCurrentSection(services)
   activateMenuAtCurrentSection(about)
   activateMenuAtCurrentSection(contact)
-  //activateMenuAtCurrentSection(depositions)
+  activateMenuAtCurrentSection(depositions)
 }
 function activateMenuAtCurrentSection(section) {
   const targetLine = scrollY + innerHeight / 2
@@ -49,6 +49,8 @@ function closeMenu() {
   document.querySelector('body').classList.remove('menu-expanded')
 }
 
+// ScrollReveal
+
 ScrollReveal({
   origin: 'top',
   distance: '30px',
@@ -60,12 +62,37 @@ ScrollReveal({
     #services,
     #services header,
     #services .card,
+    #depositions,
+    #depositions header,
+    #depositions .content,
+    #companies,
+    #companies .company,
     #about,
     #about header,
     #about .content,
+    #about img,
     #contact,
     #contact header,
     #contact .content,
     footer,
     footer p,
     footer .social-links`)
+
+// Swiper
+
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.swiper-pagination'
+  },
+  mousewheel: true,
+  keyboard: true,
+  spaceBetween: 32,
+  breakpoints: {
+    769: {
+      slidesPerView: 2,
+      setWrapperSize: true,
+      spaceBetween: 32
+    }
+  }
+})
