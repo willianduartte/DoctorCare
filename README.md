@@ -11,7 +11,7 @@
     <img src='DoctorCareMobile.gif'>
 </div>
 <p align='center'>
-    <a href="https://willianduartte.github.io/DoctorCare/">Clique aqui para Testar o app</a>
+    <a href="https://willianduartte.github.io/HTML-DoctorCare/">Clique aqui para Testar o app</a>
 </p>
 
 # Tecnologias
