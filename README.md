@@ -10,9 +10,9 @@
 <div align='center'>
     <img src='DoctorCareMobile.gif'>
 </div>
-<p align='center'>
+<h1 align='center'>
     <a href="https://willianduartte.github.io/HTML-DoctorCare/">Clique aqui para Testar o app</a>
-</p>
+</h1>
 
 # Tecnologias
 As seguintes tecnologias foram usadas:
